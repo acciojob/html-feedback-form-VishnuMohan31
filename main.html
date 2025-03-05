@@ -1,16 +1,69 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form {
+            width: 50%;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        input {
+			height:15px;
+            margin-bottom: 15px;
+            width: 93%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        input[type="range"],[type="portfolio"],[type="text"] {
+            width: 93%;
+        }
+		input[type="color"] {
+            width: 100%;
+			height:35px;
+		.btn, button{
+			background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        
+        
+    </style>
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+    <h1 style="text-align: center;">Feedback Form</h1>
+    <form method="POST" action="#">
+        <label for="name">Name*</label>
+        <input type="text" id="name" name="name" minlength="3" maxlength="50" required>
 
+        <label for="portfolio">Portfolio*</label>
+        <input type="url" id="portfolio" name="portfolio" required>
+
+        <label for="favColor">Favorite Color*</label>
+        <input type="color" id="favColor" name="favColor" required>
+
+        <label for="likeness">Likeness (1 to 100)*</label>
+        <input type="range" id="likeness" name="likeness" min="1" max="100" required>
+		<div class="btn"><button type="submit">Submit</button></div>
+        
+    </form>
 </body>
-
 </html>
